@@ -1,23 +1,23 @@
 ## 1. Project Setup
 
-- [ ] 1.1 Initialize project per Framework: Next.js 15 App Router with TypeScript
-- [ ] 1.2 Configure Styling: Tailwind CSS v4 + CSS Variables for three-palette tokens
-- [ ] 1.3 Implement Font strategy: Self-hosted via next/font for Bodoni, Playfair Display, Inter, Noto Sans TC, IBM Plex Mono
-- [ ] 1.4 Install dependencies per Animation: GSAP 主力 + Motion 元件級 + Three.js 點睛 (gsap, motion, three, @react-three/fiber, @react-three/drei)
-- [ ] 1.5 Configure Single-page scroll narrative, no routes (only `/` route, no menu / footer / breadcrumb)
+- [x] 1.1 Initialize project per Framework: Next.js 15 App Router with TypeScript (Next 16.2.4 + React 19.2.4 + Turbopack)
+- [x] 1.2 Configure Styling: Tailwind CSS v4 + CSS Variables for three-palette tokens
+- [x] 1.3 Implement Font strategy: Self-hosted via next/font for Bodoni, Playfair Display, Inter, Noto Sans TC, IBM Plex Mono (Bodoni substituted by Playfair pending license decision)
+- [x] 1.4 Install dependencies per Animation: GSAP 主力 + Motion 元件級 + Three.js 點睛 (gsap, motion, three, @react-three/fiber, @react-three/drei)
+- [x] 1.5 Configure Single-page scroll narrative, no routes (only `/` route, no menu / footer / breadcrumb)
 - [ ] 1.6 Configure Deployment: Vercel + Preview URLs (link GitHub repo waynetrece/Ridge-Studio)
 - [ ] 1.7 Configure environment variables (RESEND_API_KEY, CONTACT_EMAIL_TO, CALENDLY_URL)
 
 ## 2. Design System Foundation
 
-- [ ] 2.1 Implement Editorial Dark palette tokens (background, text, accent wine #800000, gold #C9A961)
-- [ ] 2.2 Implement Cream Editorial palette tokens (background #FDFCF0, text, hairline gold #D4AF37)
-- [ ] 2.3 Implement Gallery White palette tokens (pure white, pure black, sharp corner policy)
-- [ ] 2.4 Implement Three-palette segmentation across acts via CSS variable switching with smooth transitions
-- [ ] 2.5 Implement Shared typographic DNA across all palettes (serif headings, monospace numerics, common DNA)
-- [ ] 2.6 Enforce Zero corner radius and minimal shadows in base styles (max 2px radius globally)
-- [ ] 2.7 Establish Magazine-grade whitespace tokens (section padding, body 72ch max, hero 48ch max)
-- [ ] 2.8 Implement Accessibility compliance at WCAG AA (focus rings, contrast checks, touch targets ≥44px)
+- [x] 2.1 Implement Editorial Dark palette tokens (background, text, accent wine #800000, gold #C9A961)
+- [x] 2.2 Implement Cream Editorial palette tokens (background #FDFCF0, text, hairline gold #D4AF37)
+- [x] 2.3 Implement Gallery White palette tokens (pure white, pure black, sharp corner policy)
+- [x] 2.4 Implement Three-palette segmentation across acts via CSS variable switching with smooth transitions
+- [x] 2.5 Implement Shared typographic DNA across all palettes (serif headings, monospace numerics, common DNA)
+- [x] 2.6 Enforce Zero corner radius and minimal shadows in base styles (max 2px radius globally)
+- [x] 2.7 Establish Magazine-grade whitespace tokens (section padding, body 72ch max, hero 48ch max)
+- [x] 2.8 Implement Accessibility compliance at WCAG AA (focus rings, contrast checks, touch targets ≥44px) — base done, full audit in 8.1
 
 ## 3. Motion System Foundation
 
@@ -31,7 +31,7 @@
 
 ## 4. Narrative Structure (Acts 1-7)
 
-- [ ] 4.1 Implement Seven-act narrative structure as continuous scroll on single page
+- [x] 4.1 Implement Seven-act narrative structure as continuous scroll on single page (skeleton with placeholder content done; per-act detail in 4.3-4.10)
 - [ ] 4.2 Apply Non-condescending narrative posture review on all copy (no "you lack", IWARE-first subject)
 - [ ] 4.3 Implement Act 1 opening combines quote and statistics (founder quote slow fade-in + statistical CountUp)
 - [ ] 4.4 Implement Act 2 — "我們是這樣認識你們的" (left big H1 + right platform list with DrawSVG hairlines)
