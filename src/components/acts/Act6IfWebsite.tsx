@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 const modules = [
   {
     no: "01",
@@ -33,7 +37,13 @@ export function Act6IfWebsite() {
       className="section-pad min-h-screen"
     >
       <div className="container mx-auto px-6 max-w-6xl">
-        <header className="text-center mb-16">
+        <motion.header
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{ duration: 1.2, ease: [0.65, 0, 0.35, 1] }}
+          className="text-center mb-16"
+        >
           <p className="text-xs tracking-widest uppercase font-mono opacity-60 mb-6">
             CHAPTER 06
           </p>
@@ -42,13 +52,26 @@ export function Act6IfWebsite() {
             <br />
             我們會這樣設計
           </h2>
-        </header>
+        </motion.header>
 
-        <hr className="hairline mb-20" />
+        <motion.hr
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{ duration: 1.5, ease: [0.65, 0, 0.35, 1] }}
+          className="hairline mb-20 origin-left"
+        />
 
         <div className="space-y-32">
-          {modules.map((m) => (
-            <article key={m.no} className="grid lg:grid-cols-12 gap-12">
+          {modules.map((m, i) => (
+            <motion.article
+              key={m.no}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 1.2, delay: i * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
+              className="grid lg:grid-cols-12 gap-12"
+            >
               <div className="lg:col-span-5">
                 <p className="text-xs font-mono opacity-60 mb-4">{m.no}</p>
                 <h3 className="text-3xl lg:text-4xl mb-4">{m.title}</h3>
@@ -68,7 +91,7 @@ export function Act6IfWebsite() {
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
