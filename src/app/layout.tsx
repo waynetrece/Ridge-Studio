@@ -1,39 +1,48 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, IBM_Plex_Mono, Noto_Sans_TC } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Noto_Serif_TC,
+  Bricolage_Grotesque,
+  Space_Mono,
+} from "next/font/google";
 import "./globals.css";
+import { Cursor } from "@/components/Cursor";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { LoadingCurtain } from "@/components/LoadingCurtain";
+import { PaperTexture } from "@/components/PaperTexture";
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-serif",
-  weight: ["400", "500", "700"],
+  variable: "--font-serif-en",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const notoSerifTC = Noto_Serif_TC({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sans",
+  variable: "--font-serif-tc",
   weight: ["400", "500", "600", "700"],
 });
 
-const notoSansTC = Noto_Sans_TC({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sans-tc",
-  weight: ["300", "400", "500", "700"],
+  variable: "--font-sans",
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
+const spaceMono = Space_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-mono",
-  weight: ["400", "500", "600"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   title: "IWARE × Ridge Studio — 給山峸製作設計的官網提案",
   description:
-    "IWARE 為 Ridge Studio 山峸製作設計設想的官網提案。一份本身就是技術示範的 pitch microsite。",
+    "IWARE 為 Ridge Studio 山峸製作設計設想的官網提案。一份本身就是技術示範的劇場圖錄。",
   metadataBase: new URL("https://ridge-studio-proposal.vercel.app"),
   openGraph: {
     title: "IWARE × Ridge Studio — 給山峸製作設計的官網提案",
@@ -41,23 +50,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_TW",
   },
-  robots: {
-    index: false,
-    follow: false,
-  },
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="zh-TW"
-      className={`${playfair.variable} ${inter.variable} ${notoSansTC.variable} ${ibmPlexMono.variable}`}
+      className={`${cormorant.variable} ${notoSerifTC.variable} ${bricolage.variable} ${spaceMono.variable}`}
     >
-      <body className="antialiased" data-palette="white">
+      <body className="antialiased" data-palette="dark">
+        <PaperTexture />
+        <LoadingCurtain />
+        <Cursor />
+        <ScrollProgress />
         {children}
       </body>
     </html>
