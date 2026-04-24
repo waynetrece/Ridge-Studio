@@ -55,6 +55,17 @@
 - [ ] 6.2 Lazy-load 3D bundle via dynamic import to keep initial JS under 250KB gzipped
 - [ ] 6.3 Implement reduced-motion fallback for 3D scene (static rendered frame, no auto-rotation)
 
+## 6A. Experiential Frontend / Creative Stagecraft
+
+- [ ] 6A.1 Document which Omma experimental effects should be ported into the formal Next.js implementation
+- [ ] 6A.2 Define `DOM in space` patterns for this project (suspended panels, fragment cards, ghost typography, hanging modules)
+- [ ] 6A.3 Upgrade `Act II / III` from flat editorial sections into a more spatial research-wall / archive-wall experience
+- [ ] 6A.4 Refine `Act IV` bottom composition and visual weight so stage floor does not overpower content
+- [ ] 6A.5 Decide final density and placement of atmospheric layers (mist, dust, soft beams, reflected floor glow)
+- [ ] 6A.6 Evaluate whether `clip-path`, `mask-image`, or `SVG filter` techniques are appropriate for curtain / reveal moments
+- [ ] 6A.7 Evaluate whether `canvas` overlay or `Three.js CSS3DRenderer` style integration is worth the added complexity
+- [ ] 6A.8 Create a rule set for when to use stronger experimental effects versus restrained editorial treatment
+
 ## 7. CTA and Conversion
 
 - [ ] 7.1 Implement Dual CTA in Act 7 (two hairline-bordered buttons, serif label, zero radius, side by side)
